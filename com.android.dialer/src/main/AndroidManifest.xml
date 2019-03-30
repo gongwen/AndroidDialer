@@ -18,10 +18,6 @@
     package="com.android.dialer"
     coreApp="true">
 
-    <uses-sdk
-        android:minSdkVersion="23"
-        android:targetSdkVersion="23" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
@@ -369,7 +365,10 @@
             android:name=".database.VoicemailArchiveProvider"
             android:authorities="com.android.dialer.database.voicemailarchiveprovider"
             android:exported="false"
-            android:multiprocess="false"
-            />
+            android:multiprocess="false" />
+
+        <provider
+            android:authorities="com.android.dialer"
+            android:name=".contentprovider.DialerContentProvider"/>
     </application>
 </manifest>

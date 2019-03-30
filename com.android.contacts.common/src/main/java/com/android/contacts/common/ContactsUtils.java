@@ -22,7 +22,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.ContactsContract.CommonDataKinds.Im;
-import android.support.annotation.IntDef;
+import android.support.annotation.LongDef;
 import android.support.v4.os.BuildCompat;
 import android.provider.ContactsContract.DisplayPhoto;
 import android.telephony.PhoneNumberUtils;
@@ -111,7 +111,7 @@ public class ContactsUtils {
      * dialer is running inside Work Profile.
      */
     @Retention(RetentionPolicy.SOURCE)
-    @IntDef({USER_TYPE_CURRENT, USER_TYPE_WORK})
+    @LongDef({USER_TYPE_CURRENT, USER_TYPE_WORK})
     public @interface UserType {}
 
     /**
